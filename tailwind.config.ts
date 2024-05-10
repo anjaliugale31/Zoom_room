@@ -31,6 +31,13 @@ const config = {
         },
         orange: {
           1: "#FF742E",
+          2: "#F0A35F",
+        },
+        purpul: {
+          1: "#830EF9",
+        },
+        yellow: {
+          1: "#F9A90E",
         },
       },
       backgroundImage: {
