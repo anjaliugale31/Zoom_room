@@ -10,11 +10,10 @@ import {
 import { ReactNode, useEffect, useState } from 'react';
 
 const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
-console.log("🚀 ~ apiKey:", apiKey)
 
 const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
     const [videoClient, setVideoClient] = useState<StreamVideoClient>()
-    //comming from clerk js
+    //comming from clerk js, clerk gives currently logged in user in 'user'
     const { user, isLoaded } = useUser()
     useEffect(() => {
         //condition check for creating client

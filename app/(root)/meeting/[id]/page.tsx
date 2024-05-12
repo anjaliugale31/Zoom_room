@@ -10,14 +10,15 @@ import { useState } from 'react';
 const Meeting = ({ params: { id } }: { params: { id: string } }) => {
     const { user, isLoaded } = useUser();
     const [isSetUpCompleted, setIsSetUpCompleted] = useState(false)
-    const { call, isCallLoading } = useGetCallById(id)
-    if (!isLoaded || !isCallLoading) return <Loader />
+
+    const { call, isCallLoading } = useGetCallById(id);
+    if (!isLoaded || isCallLoading) return <Loader />;
     return (
         //creating the meeting page 
         <main className='h-screen w-full'>
             <StreamCall call={call}>
                 <StreamTheme>
-                    {isSetUpCompleted ? <MeetingSetup /> : <MeetingRoom />}
+                    {!isSetUpCompleted ? <MeetingSetup setIsSetUpCompleted={setIsSetUpCompleted} /> : <MeetingRoom />}
                 </StreamTheme>
             </StreamCall>
         </main>

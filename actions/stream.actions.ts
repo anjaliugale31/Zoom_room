@@ -15,6 +15,7 @@ export const tokenProvider = async () => {
 
   //creating stream client
   const client = new StreamClient(apiKey, apiSecret);
+  console.log("🚀 ~ tokenProvider ~ client:", client);
 
   //this token valide for 1 hr
   const exp = Math.round(new Date().getTime() / 1000) + 60 * 60;
