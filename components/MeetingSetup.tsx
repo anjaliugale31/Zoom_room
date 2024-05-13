@@ -47,7 +47,7 @@ const MeetingSetup = ({ setIsSetUpCompleted }: { setIsSetUpCompleted: (value: bo
                 {/* audio setting menu  */}
                 <DeviceSettings />
             </div>
-            <Button className='rounded bg-green-500 px-20 py-2.5' onClick={() => {
+            <Button className='rounded bg-dark-3 px-20 py-2.5' onClick={() => {
                 call.join();
                 setIsSetUpCompleted(true)
             }}>

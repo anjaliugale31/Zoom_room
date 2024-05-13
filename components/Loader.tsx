@@ -7,8 +7,8 @@ const Loader = () => {
             <Image
                 src='./icons/loading-circle.svg'
                 alt="loader"
-                width={50}
-                height={50}
+                width={60}
+                height={60}
             />
         </div>
     )
